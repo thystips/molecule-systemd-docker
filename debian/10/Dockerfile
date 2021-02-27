@@ -5,7 +5,7 @@ ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get install -y systemd systemd-sysv apt-utils
+    && apt-get install -y systemd systemd-sysv apt-utils apt-transport-https
 
 RUN cd /lib/systemd/system/sysinit.target.wants/ \
     && ls | grep -v systemd-tmpfiles-setup | xargs rm -f $1
