@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'master'
-    tags:
-      - 'v*.*.*'
 
 jobs:
   docker:
@@ -54,13 +52,6 @@ jobs:
           context: debian/10
           push: true
           tags: thystips/molecule-systemd:debian-10
-      -
-        name: Build and push - centos-8
-        uses: docker/build-push-action@v2
-        with:
-          context: centos/8
-          push: true
-          tags: thystips/molecule-systemd:centos-8
       -
         name: Build and push - centos-7
         uses: docker/build-push-action@v2
