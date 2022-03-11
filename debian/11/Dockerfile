@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:11
 
 ENV container docker
 ENV LC_ALL C
